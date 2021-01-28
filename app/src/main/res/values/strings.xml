@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ViewDemo</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="mybehavior">com.zhh.demo.behavior.ClassifyBehavior</string>
+</resources>

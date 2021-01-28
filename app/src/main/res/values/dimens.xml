@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="headHeight">100dp</dimen>
+    <dimen name="maxHeadTopHeight">90dp</dimen>
+    <dimen name="minHeadTopHeight">30dp</dimen>
+    <dimen name="length">70dp</dimen>
+    <dimen name="imageIcon">60dp</dimen>
+    <dimen name="backIcon">30dp</dimen>
+</resources>

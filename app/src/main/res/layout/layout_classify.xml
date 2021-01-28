@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhh.demo.view.MFCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/sticky_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/headHeight"
+                android:background="@color/colorAccent">
+
+                <Button
+                    android:id="@+id/buttonBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/backIcon"
+                    android:text="返回">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="@dimen/imageIcon"
+                    android:layout_height="@dimen/imageIcon"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/tv_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical"
+                    android:text="水果品类"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/minHeadTopHeight"
+                app:layout_collapseMode="pin"></android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/mybehavior">
+
+        <com.zhh.demo.view.VerticalLinearLayout
+            android:id="@+id/NestedVerLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linBanner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/banner"
+                android:orientation="vertical" />
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/smartTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#d8d8d8"
+                android:overScrollMode="never"
+                app:stl_defaultTabTextHorizontalPadding="24dp"
+                app:stl_dividerColor="@android:color/transparent"
+                app:stl_dividerThickness="0dp"
+                app:stl_indicatorColor="#ff3444"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="4dp"
+                app:stl_titleOffset="auto_center"
+                app:stl_underlineColor="@android:color/transparent"
+                app:stl_underlineThickness="0dp" />
+
+            <com.zhh.demo.NoScrollViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.zhh.demo.view.VerticalLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</com.zhh.demo.view.MFCoordinatorLayout>
